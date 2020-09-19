@@ -161,7 +161,6 @@
 				47EA1B39BF18E0C025AFCC41 /* Pods-rnFlip-tvOSTests.debug.xcconfig */,
 				3571DADA1BE5AF6AACCFACE3 /* Pods-rnFlip-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -481,7 +480,7 @@
 		};
 		ACFC1ECB0D948DE4F7D07574 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -524,7 +523,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rnFlip/Pods-rnFlip-resources.sh\"\n";
 			showEnvVarsInLog = 0;
