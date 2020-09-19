@@ -2,10 +2,11 @@ import styled from 'styled-components/native';
 
 // ======================================= Style for Transaction
 export const Container = styled.View`
+  flex: 1;
   background-color: #f5f9f8;
 `;
 export const FlatListStyled = styled.FlatList`
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 `;
 export const TextStyle = styled.Text`
   font-size: 12px;
@@ -104,6 +105,61 @@ export const CheckedCircle = styled.View`
   background-color: orange;
 `;
 
+// ======================================= Style for Detail
+export const ContainerDetail = styled.SafeAreaView`
+  margin-top: 30px;
+`;
+export const WrapperOne = styled.View`
+  width: 41%;
+  padding-vertical: 15px;
+`;
+export const WrapperMain = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+export const IdContainer = styled.View`
+  background-color: white;
+  padding: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 1px;
+`;
+
+export const DetailSection = styled.View`
+  flex-direction: row;
+  background-color: white;
+  padding: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3px;
+`;
+
+export const DetailsWrapper = styled.View`
+  background-color: white;
+  padding: 30px;
+`;
+
+export const TextStyleDetail = styled.Text`
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+export const Key = styled.Text`
+  font-size: 16px;
+  font-weight: 700;
+`;
+
+export const Value = styled.Text`
+  font-size: 16px;
+`;
+
+export const TutupText = styled.Text`
+  color: orange;
+  font-size: 20px;
+  font-weight: 500;
+`;
+
 // ======================================= Style for SearchBar
 export const ContainerSB = styled.View`
   align-items: center;
@@ -137,7 +193,6 @@ export const UrutkanTextSB = styled.Text`
 `;
 
 // ======================================= Style for Loading
-
 export const ModalBackground = styled.View`
   flex: 1;
   align-items: center;
@@ -147,9 +202,9 @@ export const ModalBackground = styled.View`
 
 export const IndicatorWrapper = styled.View`
   background-color: #ffffff;
-  height: 100;
-  width: 100;
-  border-radius: 10;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;

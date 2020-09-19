@@ -34,7 +34,7 @@ import {
   searchFilter,
 } from '../utils/helper';
 
-// import Icon from 'react-native-vector-icons/dist/Fontisto';
+import Icon from 'react-native-vector-icons/Fontisto';
 
 const options = [
   {
@@ -65,10 +65,7 @@ export default function Transaction({navigation}) {
   const [modalVisible, setModalVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState({key: 'default', name: 'URUTKAN'});
-  console.log(isLoading, '<<<<');
-
   const getApi = async () => {
-    console.log('masuk getapi');
     try {
       setIsLoading(true);
       await fetch('https://nextar.flip.id/frontend-test')
@@ -77,7 +74,6 @@ export default function Transaction({navigation}) {
           setIsLoading(false);
           setDataTrans(Object.values(data));
           setDataTemp(Object.values(data));
-          console.log('berhasil data');
         });
     } catch (error) {
       setIsLoading(false);
@@ -86,9 +82,7 @@ export default function Transaction({navigation}) {
   };
 
   useEffect(() => {
-    // return () => {
     getApi();
-    // };
   }, []);
 
   const onPressDetail = (item) => {
@@ -166,12 +160,12 @@ export default function Transaction({navigation}) {
         <CardContentTwo>
           <TextBank>
             {formatBankName(item.sender_bank)}{' '}
-            {/* <Icon name="arrow-right" size={10} />{' '} */}
+            <Icon name="arrow-right" size={10} />{' '}
             {formatBankName(item.beneficiary_bank)}
           </TextBank>
           <TextStyle>{formatName(item.beneficiary_name)}</TextStyle>
           <TextStyle>
-            {/* {formatCurrency(item.amount)} <Icon name="ellipse" size={5} />{' '} */}
+            {formatCurrency(item.amount)} <Icon name="ellipse" size={5} />{' '}
             {formatDate(item.created_at)}
           </TextStyle>
         </CardContentTwo>
